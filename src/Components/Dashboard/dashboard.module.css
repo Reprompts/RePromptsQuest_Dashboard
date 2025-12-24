@@ -1,0 +1,189 @@
+/* Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 2rem 1rem 0 1rem;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+
+.content {
+  flex: 1;
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  max-width: 750px;
+  background-color: #f5f7fa;
+  padding: 1rem;
+  border-left: 4px solid #0088cc;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 120, 200, 0.08);
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.highlight {
+  color: #0088cc;
+  font-weight: 600;
+}
+
+/* Section styling */
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: black;
+  border-left: 4px solid #2b9348;
+  padding-left: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Responsive Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card Styling */
+.card {
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.card:hover {
+  box-shadow: 0 6px 14px rgba(0, 120, 200, 0.15);
+  transform: translateY(-3px);
+  border-color: #0088cc;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff4500;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: white;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-align: justify;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #2b9348;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #23763a;
+}
+
+/* Card Color Variants - DARKER DISTINCTIVE TONES */
+.cardColor1 {
+  background-color: #3e2c1e; /* warm brown */
+  border: 1px solid #5c4433;
+}
+
+.cardColor2 {
+  background-color: #1e2a3e; /* navy blue */
+  border: 1px solid #334a66;
+}
+
+.cardColor3 {
+  background-color: #1e3e2a; /* forest green */
+  border: 1px solid #33664a;
+}
+
+.cardColor4 {
+  background-color: #3e341e; /* dark amber */
+  border: 1px solid #665c33;
+}
+
+.cardColor5 {
+  background-color: #311e3e; /* plum purple */
+  border: 1px solid #503366;
+}
+
+.cardColor6 {
+  background-color: #1e3e31; /* teal green */
+  border: 1px solid #338066;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-top: 120px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+}

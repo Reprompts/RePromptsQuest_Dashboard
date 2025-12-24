@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 2rem 1rem 0 1rem;
+  color: #1a1a1a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+
+.content {
+  flex: 1;
+}
+
+.heading {
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card Base Style */
+.card {
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border: 1px solid #e6e6e6;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 120, 200, 0.15);
+  border-color: #0088cc;
+}
+
+/* Modern Card Color Themes */
+.color1 {
+  background-color: #2a1a1a;
+  border-color: #662222;
+}
+.color2 {
+  background-color: #1a1f2a;
+  border-color: #223366;
+}
+.color3 {
+  background-color: #1a2a1f;
+  border-color: #226644;
+}
+.color4 {
+  background-color: #2a261a;
+  border-color: #665522;
+}
+.color5 {
+  background-color: #251a2a;
+  border-color: #552266;
+}
+.color6 {
+  background-color: #1a2a1a;
+  border-color: #226622;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ff4500;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: white;
+  line-height: 1.5;
+  text-align: justify;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  margin-bottom: 1rem;
+}
+
+.button {
+  justify-self: start;
+  padding: 8px 16px;
+  background-color: #2b9348;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #23763a;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-top: 120px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+  }
+}

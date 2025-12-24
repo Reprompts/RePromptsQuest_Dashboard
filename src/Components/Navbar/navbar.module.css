@@ -1,0 +1,119 @@
+/* Global navbar wrapper (2-row layout) */
+.navbarWrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #1a1a1b;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+/* First row: logo on left, login on right */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 1rem;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ff4500;
+  text-decoration: none;
+}
+
+/* Login Button wrapper */
+.loginButtonWrapper {
+  text-decoration: none;
+}
+
+/* Login button */
+.redButton {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.redButton:hover {
+  background-color: #e03d00;
+}
+
+/* Second row: nav links */
+.scrollNav {
+  display: flex;
+  justify-content: center;  /* 👈 Centered on PC */
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f89704;
+  overflow-x: hidden;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: #ff4500 transparent;
+}
+
+/* Individual nav item */
+.navItem {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: rgba(255, 69, 0, 0.1);
+}
+
+.navItem:hover {
+  background-color: rgba(255, 69, 0, 0.2);
+}
+
+.active {
+  color: black;
+  background-color: rgba(255, 69, 0, 0.3);
+}
+
+/* Scrollbar styling for Webkit browsers */
+.scrollNav::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollNav::-webkit-scrollbar-thumb {
+  background-color: #ff4500;
+  border-radius: 3px;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  .topBar {
+    height: 56px;
+    padding: 0 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .redButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .navItem {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .scrollNav {
+    justify-content: flex-start; /* 👈 Start align on mobile */
+    overflow-x: auto;            /* 👈 Enable scrolling */
+  }
+}

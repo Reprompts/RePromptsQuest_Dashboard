@@ -1,0 +1,70 @@
+.footer {
+  position: relative;
+  left: 0;
+  width: 100vw; /* Force exact viewport width */
+  margin-left: calc(-50vw + 50%); /* Neutralize parent's padding/margin */
+  background-color: #1a1a1b;
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff4500;
+}
+
+.navLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 100%;
+}
+
+.navLinks a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  word-break: break-word;
+}
+
+.navLinks a:hover {
+  color: #ff4500;
+}
+
+.bottomSection {
+  font-size: 0.85rem;
+  color: #888888;
+  padding-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navLinks {
+    gap: 1rem;
+    font-size: 0.9rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+
+  .bottomSection {
+    font-size: 0.8rem;
+  }
+}
